@@ -31,6 +31,14 @@ const presonneSchema = new mongoose.Schema({
         type:Date,
         required:true
     },
+    id_region:{
+        type:mongoose.Schema.ObjectId, 
+        ref: 'region'
+    },
+    id_centre:{
+        type:mongoose.Schema.ObjectId, 
+        ref: 'centre'
+    },
     dose: [],
 });
 module.exports = mongoose.model('presonne',presonneSchema);

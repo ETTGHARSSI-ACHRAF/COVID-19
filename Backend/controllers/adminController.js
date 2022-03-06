@@ -40,7 +40,7 @@ const loginAdmine = async (req, res) => {
                     { result: admin[0] },
                     process.env.SECRET_KEY_ADMIN,
                     {
-                        expiresIn: "1h",
+                        expiresIn: "24h",
                     }
                 );
                 res.status(200).json({
