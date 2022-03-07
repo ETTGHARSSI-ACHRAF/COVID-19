@@ -1,10 +1,10 @@
 import React from 'react'
 import FormLogin from '../components/FormLogin'
 
-const Login = () => {
+const Login = ({authenticate}) => {
   return (
     <div className='font-mono'>
-        <FormLogin/>
+        <FormLogin authenticate={authenticate}/>
     </div>
   )
 }

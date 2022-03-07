@@ -4,12 +4,12 @@ import { useCookies } from 'react-cookie';
 import Stat from '../components/Chart'
 import SidBar from '../components/SidBar'
 
-const Dashbord = () => {
+const Dashbord = ({logout}) => {
   
   
   return (
     <div>
-        <SidBar/>
+        <SidBar logout={logout}/>
         <div className="h-full md:ml-64">
            <Stat/>
         </div>

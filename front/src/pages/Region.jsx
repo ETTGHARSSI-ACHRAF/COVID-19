@@ -3,10 +3,10 @@ import AddRegion from '../components/AddRegion'
 import SidBar from '../components/SidBar'
 import Table from '../components/Table'
 
-const Region = () => {
+const Region = ({logout}) => {
   return (
     <div>
-        <SidBar/>
+        <SidBar logout={logout}/>
         <div className="h-full md:ml-64">
             <AddRegion/>
             <Table/>

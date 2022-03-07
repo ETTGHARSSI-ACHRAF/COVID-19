@@ -4,7 +4,7 @@ import { useCookies } from 'react-cookie';
 import { useNavigate } from 'react-router-dom';
 
 
-const FormLogin = () => {
+const FormLogin = ({authenticate}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [err, setErr] = useState(false);
@@ -18,6 +18,7 @@ const FormLogin = () => {
             .then(res => {
                 if (res.data.success === 1) {
                     setCookie('token',res.data.token,{ httpOnly: false });
+                    authenticate();
                     navigate('/dashbord');
                 } else {
                     setErr(true);
